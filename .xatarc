@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://D-S-s-workspace-7o7o5q.ap-southeast-2.xata.sh/db/attendant-app",
-  "codegen": {
-    "output": "lib/xata.ts"
-  }
-}
