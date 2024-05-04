@@ -1,7 +1,10 @@
 "use client"
-import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
-import Image from 'next/image';
+
+
 import React from 'react'
+import Image from 'next/image';
+import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 function Header() {
   const {user}=useKindeBrowserClient();
@@ -10,13 +13,8 @@ function Header() {
         <div>
 
         </div>
-        <div>
-          <Image src={user?.picture} 
-          width={35} 
-          height={35}
-          alt='user'
-          className='rounded-full'
-          />
+        <div className='bg-red-500 p-3 rounded-lg text-white hover:bg-red-600'>
+        <LogoutLink>Log out</LogoutLink>
         </div>
     </div>
   )
