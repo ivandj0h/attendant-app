@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+"use client";
+
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 const Home = () => {
 
-  const userName: string = "ivandjoh";
+  useEffect(() => {
+    redirect('/api/auth/login?post_login_redirect_url=/dashboard')
+  }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <Button variant={"outline"}>Hello, {userName}</Button>
-      </div>
-    </main>
+    <></>
   );
 }
 
